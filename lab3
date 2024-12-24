@@ -18,49 +18,52 @@ for(;;)
 {
 printf("\nSTACK OPERATIONS\n");
 printf("====================");
-printf("\n 1.Push\n 2.Pop\n 3.Display\n 4.Peek\n 5.CheckPalindrome\n
-6.DemonstarteOverflow\n 7.Demonstarte Underflow\n 8.EXIT\n");
+printf("\n 1.Push\n 2.Pop\n 3.Display\n 4.Peek\n 5.CheckPalindrome\n 6.DemonstarteOverflow\n 7.Demonstarte Underflow\n 8.EXIT\n");
 printf("Enter your choice\n");
 scanf("%d",&iChoice);
 switch(iChoice)
 {
-{
 case 1: if(!fnStkFull(top))
+{
 printf("\nEnter element to be pushed onto the stack\n");
 scanf("%d", &iElem);
 fnPush(stkArray, iElem, &top);
 }
 else
 {
+printf("\nStack Overflow\n");
 }
 break;
-printf("\nStack Overflow\n");
-{
+
 case 2: if(!fnStkEmpty(top))
+{
 iElem = fnPop(stkArray, &top);
 printf("\nPopped Element is %d\n", iElem);
 }
 else
 {
+printf("\nStack Underflow\n");
 }
 break;
-printf("\nStack Underflow\n");
+
+case 3: if(fnStkEmpty(top))
 {
+printf("\nStack Empty\n");
 }
 else
 {
-}
-case 3: if(fnStkEmpty(top))
-printf("\nStack Empty\n");
 fnDisplay(stkArray, top);
+}
 break;
 case 4: if(!fnStkEmpty(top))
 {
-}
-else
 iElem = fnPeek(stkArray, top);
 printf("\nElement at the top of the stack is %d\n", iElem);
+}
+else
+{
 printf("\nEmpty Stack\n");
+}
 break;
 case 5: printf("\nEnter number to be checked for a palindrome : ");
 scanf("%d", &iElem);
