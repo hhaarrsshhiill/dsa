@@ -14,6 +14,7 @@ void fnDispCal (DAYTYPE *);
 void fnReadCal (DAYTYPE *);
 DAYTYPE *fnCreateCal();
 int main()
+{
 DAYTYPE *weeklyCalendar = fnCreateCal();
 fnReadCal (weeklyCalendar);
 fnDispCal(weeklyCalendar);
@@ -66,8 +67,7 @@ if (calendar[i].iDate == 0)
  continue;
 
 }
-printf(" Day Name: %s
-\n", calendar[i].acDayName);
+printf(" Day Name: %s\n", calendar[i].acDayName);
 printf(" Date: %d\n", calendar [i].iDate);
 printf(" Activity: %s\n\n", calendar[i].acActivity);
 }}
